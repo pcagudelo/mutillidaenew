@@ -347,14 +347,14 @@ class YouTubeVideoHandler {
 				$lHTML .= $this->getYouTubeIsNotReachableAdvice();
 			}//end if YouTube is not reachable
 
-			//$lHTML .= '<br/><span class="label">'.$lVideoTitle.': </span>';
+			//$lHTML .= '<br/><span class="label ">'.$lVideoTitle.': </span>';
 
 			//if($this->mYouTubeIsReachable){
 				//$lHTML .= $this->generateYouTubeFrameHTML($lVideoIdentificationToken);
 			//}else {
-				$lHTML .= '<br/><a href="https://www.youtube.com/watch?v='.
+				$lHTML .= '<br/><a class="poli-texto" href="https://www.youtube.com/watch?v='.
 				$lVideoIdentificationToken.
-				'" target="_blank"><img style="margin-right: 5px;" src="images/youtube-play-icon-40-40.png" alt="YouTube" /><span class="label">'.
+				'" target="_blank"><box-icon name="youtube" type="logo" class="poli-icon"></box-icon><span class="label">'.
 				$lVideoTitle.
 				'</span></a>';
 			//}// end if

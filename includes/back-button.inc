@@ -43,17 +43,16 @@
    	}// end if
 ?>
 
-<div style="margin: 5px;">
-	<span style="font-weight: bold; margin-right: 50px;">
-	<a id="back-button-anchor">
-		<img	src="./images/back-button-64-64.png"
-				alt="Go Back"
-				align="middle"
-		/>
-		&nbsp;
-		Back
+<div>
+	
+	<a id="back-button-anchor" class="poli-texto">
+		<box-icon name='arrow-back'></box-icon>
 	</a>
-	</span>
+
+</div>
+
+<div>
+
 	<?php include_once('./includes/help-button.inc');?>
 </div>
 <script nonce="<?php echo $CSPNonce; ?>">

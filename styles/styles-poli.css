@@ -1,0 +1,43 @@
+:root{
+
+    --color-v: #548235;
+    --color-f: #414141;
+
+}
+box-icon{
+    color: var(--color-f) !important;
+}
+.poli-texto{
+    color:gray !important;
+    text-decoration: none;
+    
+   
+}
+
+
+.ddsmoothmenu li:hover{
+    border-style: solid !important;
+    border-color: var(--color-v) !important; 
+
+}
+
+.ddsmoothmenu a:hover{
+
+    color:var(--color-v) !important;
+    background-color: var(--color-f) !important;
+}
+.poli-section{
+
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center  !important;
+   
+
+}
+.poli-section div{
+    flex-grow: 1 !important;
+}
+.poli-section .page-title{
+    flex-basis: 80% !important;
+}

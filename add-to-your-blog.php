@@ -182,10 +182,14 @@
 	};// end JavaScript function onSubmitBlogEntry()
 </script>
 
-<div class="page-title">Welcome To The Blog</div>
+<div class="poli-section">
+	<div class="page-title" style="height:80%">Bienvenido al Blog</div>
 
-<?php include_once (__ROOT__.'/includes/back-button.inc'); ?>
-<?php include_once (__ROOT__.'/includes/hints/hints-menu-wrapper.inc'); ?>
+	<?php include_once (__ROOT__.'/includes/back-button.inc'); ?>
+	<?php include_once (__ROOT__.'/includes/hints/hints-menu-wrapper.inc'); ?>
+
+</div>
+
 
 <fieldset>
 	<legend>Add New Blog Entry</legend>

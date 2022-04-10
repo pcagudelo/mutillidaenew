@@ -347,10 +347,22 @@
 	}
 </style>
 
-<div class="page-title">Client-side Control Challenge</div>
 
-<?php include_once (__ROOT__.'/includes/back-button.inc');?>
-<?php include_once (__ROOT__.'/includes/hints/hints-menu-wrapper.inc'); ?>
+<div class="poli-section">
+<div class="page-title">Client-side Control Challenge</div>
+<div>
+	<?php include_once (__ROOT__.'/includes/back-button.inc');?>
+</div>
+<div>
+	<?php include_once (__ROOT__.'/includes/hints/hints-menu-wrapper.inc'); ?>
+</div>
+
+
+
+</div>
+
+
+
 
 <div id="id-client-side-control-challenge-form-div" style="text-align:center;">
 	<form 	action="index.php?page=client-side-control-challenge.php" 
@@ -358,10 +370,10 @@
 			enctype="application/x-www-form-urlencoded" 
 			onsubmit="return onSubmitOfForm(this);"
 			id="idclient-side-control-challengeForm"
-			style="margin-left:auto; margin-right:auto; width:600px;">
+			style="margin-left:auto; margin-right:auto; ">
 		<table>
 			<tr>
-				<td colspan="2" class="form-header">Please enter flag into all form fields</td>
+				<td colspan="2" class="form-header">Por favor ingrese las eiquetas en los campos</td>
 			</tr>
 			<tr><td>&nbsp;</td></tr>
 			<tr>
@@ -378,132 +390,150 @@
 				</td>
 			</tr>
 			<tr><td>&nbsp;</td></tr>
-			<tr>
-				<td class="label" style="text-align: left;">Flag</td>
-				<td class="label" style="text-align: left;">
-					<?php echo $lRandomFlag;?>
-					<a 	href="index.php?page=client-side-control-challenge.php&resetTargetValue=1"
-						style="margin-left: 50px;">
-						Get New Value
-					</a>
-				</td>
-			</tr>
+	
 			<tr><td>&nbsp;</td></tr>
-			<tr>
-				<td class="label" style="text-align: left;">Text Box</td>
-				<td style="text-align: left;">
-					<input type="text" name="textbox" id="id_textbox" size="15" maxlength="15" required="required" autofocus="autofocus" />
-				</td>
-			</tr>			<tr>
-				<td class="label" style="text-align: left;">Read-only Text Box</td>
-				<td style="text-align: left;">
-					<input type="text" name="readonly_textbox" id="id_readonly_textbox" size="15" maxlength="15" required="required" autofocus="autofocus" readonly="readonly" value="42" />
-				</td>
-			</tr>			
-			<tr>
-				<td class="label" style="text-align: left;">Short Text Box</td>
-				<td style="text-align: left;">
-					<input type="text" name="short_textbox" id="id_short_textbox" size="3" maxlength="3" required="required" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Disabled Text Box</td>
-				<td style="text-align: left;">
-					<input type="text" name="disabled_textbox" id="id_disabled_textbox" size="15" maxlength="15" required="required" disabled="disabled" style="background-color:#dddddd;" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Hidden Text Box</td>
-				<td style="text-align: left;">
-					<input type="hidden" name="hidden_textbox" id="id_hidden_textbox" size="15" maxlength="15" required="required" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">"Secured by JavaScript" Text Box</td>
-				<td style="text-align: left;">
-					<input type="text" name="tricky_textbox" id="id_tricky_textbox" size="15" maxlength="15" required="required" onfocus="javascript:this.blur();" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Vanishing Text Box</td>
-				<td style="text-align: left;">
-					<input type="text" name="vanishing_textbox" id="id_vanishing_textbox" size="15" maxlength="15" required="required" onmouseover="javascript:this.type='hidden';" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Shy Text Box</td>
-				<td style="text-align: left;">
-					<input type="text" name="shy_textbox" id="id_shy_textbox" size="15" maxlength="15" required="required" class="box" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Search Textbox</td>
-				<td style="text-align: left;">
-					<input type="search" name="search" id="id_search" pattern="[a-zA-z]" required="required" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Password</td>
-				<td style="text-align: left;">
-					<input type="password" name="password" id="id_password" size="15" maxlength="15" required="required" value="Hint: If you use Burp-Suite this exercise is much easier" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Drop-down Box</td>
-				<td style="text-align: left;">
-					<select name="select" id="id_select" required="required">
-						<option value="1">One</option>
-						<option value="2">Two</option>
-						<option value="3">Buckle my shoe</option>
-					</select>
-				</td>
-			</tr>			
-			<tr>
-				<td class="label" style="text-align: left;">Checkbox</td>
-				<td style="text-align: left;">
-					<input type="checkbox" name="checkbox" id="id_checkbox" value="<?php echo $lRandomFlag;?>" required="required" disabled="disabled" /><span class="label">Select <?php echo $lRandomFlag;?>?</span><br/>
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Radio Button</td>
-				<td style="text-align: left;">
-					<input type="radio" name="radio" id="id_radio" value="1" required="required" checked="checked" /><span class="label">1</span><br/>
-					<input type="radio" name="radio" id="id_radio" value="2" required="required" /><span class="label">2</span><br/>
-					<input type="radio" name="radio" id="id_radio" value="<?php echo $lRandomFlag;?>" required="required" disabled="disabled" /><span class="label"><?php echo $lRandomFlag;?></span><br/>
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Email Control</td>
-				<td style="text-align: left;">
-					<input type="email" name="email" id="id_email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">File Upload</td>
-				<td style="text-align: left;">
-					<input type="file" name="file" id="id_file" required="required" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Number</td>
-				<td style="text-align: left;">
-					<input type="number" name="number" id="id_number" min="0" max="999" step="1" required="required" />
-				</td>
-			</tr>
-			<tr>
-				<td class="label" style="text-align: left;">Range</td>
-				<td style="text-align: left;">
-					<input type="range" name="range" id="id_range" min="0" max="999" step="1" required="required" />
-				</td>
-			</tr>		
-			<tr><td>&nbsp;</td></tr>
-			<tr>
-				<td colspan="2" style="text-align:center;">
-					<input name="client_side_control_challenge_php_submit_button" id="id_client_side_control_challenge_php_submit_button" class="button" type="submit" value="Submit" />
-				</td>
-			</tr>
-			<tr><td>&nbsp;</td></tr>
+	
 		</table>
+		<div class="poli-section">
+			<div>Etiqueta</div>
+			<div>
+				<?php echo $lRandomFlag;?>
+			</div>
+			<div>
+				Obtener nuevo valor
+			</div>
+	
+		</div>
+		<br/>
+	
+	
+		<div class="poli-section">
+				<div>					
+					<table>
+						<tr>
+							<td class="label" style="text-align: left;">Text Box</td>
+							<td style="text-align: left;">
+								<input type="text" name="textbox" id="id_textbox" size="15" maxlength="15" required="required" autofocus="autofocus" />
+							</td>
+						</tr>			<tr>
+							<td class="label" style="text-align: left;">Read-only Text Box</td>
+							<td style="text-align: left;">
+								<input type="text" name="readonly_textbox" id="id_readonly_textbox" size="15" maxlength="15" required="required" autofocus="autofocus" readonly="readonly" value="42" />
+							</td>
+						</tr>			
+						<tr>
+							<td class="label" style="text-align: left;">Short Text Box</td>
+							<td style="text-align: left;">
+								<input type="text" name="short_textbox" id="id_short_textbox" size="3" maxlength="3" required="required" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Disabled Text Box</td>
+							<td style="text-align: left;">
+								<input type="text" name="disabled_textbox" id="id_disabled_textbox" size="15" maxlength="15" required="required" disabled="disabled" style="background-color:#dddddd;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Hidden Text Box</td>
+							<td style="text-align: left;">
+								<input type="hidden" name="hidden_textbox" id="id_hidden_textbox" size="15" maxlength="15" required="required" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">"Secured by JavaScript" Text Box</td>
+							<td style="text-align: left;">
+								<input type="text" name="tricky_textbox" id="id_tricky_textbox" size="15" maxlength="15" required="required" onfocus="javascript:this.blur();" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Vanishing Text Box</td>
+							<td style="text-align: left;">
+								<input type="text" name="vanishing_textbox" id="id_vanishing_textbox" size="15" maxlength="15" required="required" onmouseover="javascript:this.type='hidden';" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Shy Text Box</td>
+							<td style="text-align: left;">
+								<input type="text" name="shy_textbox" id="id_shy_textbox" size="15" maxlength="15" required="required" class="box" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Search Textbox</td>
+							<td style="text-align: left;">
+								<input type="search" name="search" id="id_search" pattern="[a-zA-z]" required="required" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Password</td>
+							<td style="text-align: left;">
+								<input type="password" name="password" id="id_password" size="15" maxlength="15" required="required" value="Hint: If you use Burp-Suite this exercise is much easier" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td class="label" style="text-align: left;">Drop-down Box</td>
+							<td style="text-align: left;">
+								<select name="select" id="id_select" required="required">
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Buckle my shoe</option>
+								</select>
+							</td>
+						</tr>			
+						<tr>
+							<td class="label" style="text-align: left;">Checkbox</td>
+							<td style="text-align: left;">
+								<input type="checkbox" name="checkbox" id="id_checkbox" value="<?php echo $lRandomFlag;?>" required="required" disabled="disabled" /><span class="label">Select <?php echo $lRandomFlag;?>?</span><br/>
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Radio Button</td>
+							<td style="text-align: left;">
+								<input type="radio" name="radio" id="id_radio" value="1" required="required" checked="checked" /><span class="label">1</span><br/>
+								<input type="radio" name="radio" id="id_radio" value="2" required="required" /><span class="label">2</span><br/>
+								<input type="radio" name="radio" id="id_radio" value="<?php echo $lRandomFlag;?>" required="required" disabled="disabled" /><span class="label"><?php echo $lRandomFlag;?></span><br/>
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Email Control</td>
+							<td style="text-align: left;">
+								<input type="email" name="email" id="id_email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">File Upload</td>
+							<td style="text-align: left;">
+								<input type="file" name="file" id="id_file" required="required" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Number</td>
+							<td style="text-align: left;">
+								<input type="number" name="number" id="id_number" min="0" max="999" step="1" required="required" />
+							</td>
+						</tr>
+						<tr>
+							<td class="label" style="text-align: left;">Range</td>
+							<td style="text-align: left;">
+								<input type="range" name="range" id="id_range" min="0" max="999" step="1" required="required" />
+							</td>
+						</tr>		
+						<tr><td>&nbsp;</td></tr>
+						<tr>
+							<td colspan="2" style="text-align:center;">
+								<input name="client_side_control_challenge_php_submit_button" id="id_client_side_control_challenge_php_submit_button" class="button" type="submit" value="Submit" />
+							</td>
+						</tr>
+						<tr><td>&nbsp;</td></tr>
+					</table>
+				</div>
+
+			</div>
+			
+
 	</form>
 </div>
 
