@@ -349,13 +349,13 @@
 
 
 <div class="poli-section">
-<div class="page-title">Client-side Control Challenge</div>
-<div>
+	<div class="page-title">Client-side Control Challenge</div>
+
 	<?php include_once (__ROOT__.'/includes/back-button.inc');?>
-</div>
-<div>
-	<?php include_once (__ROOT__.'/includes/hints/hints-menu-wrapper.inc'); ?>
-</div>
+
+	<div>
+		<?php include_once (__ROOT__.'/includes/hints/hints-menu-wrapper.inc'); ?>
+	</div>
 
 
 
@@ -394,15 +394,15 @@
 			<tr><td>&nbsp;</td></tr>
 	
 		</table>
-		<div class="poli-section">
+		<div class="poli-section form-header" > 
 			<div>Etiqueta</div>
-			<div>
+			<div class="yellow">
 				<?php echo $lRandomFlag;?>
 			</div>
-			<div>
+			<div class="green">
 				Obtener nuevo valor
 			</div>
-	
+			<br/>
 		</div>
 		<br/>
 	
@@ -524,7 +524,7 @@
 						<tr><td>&nbsp;</td></tr>
 						<tr>
 							<td colspan="2" style="text-align:center;">
-								<input name="client_side_control_challenge_php_submit_button" id="id_client_side_control_challenge_php_submit_button" class="button" type="submit" value="Submit" />
+								<input name="client_side_control_challenge_php_submit_button" id="id_client_side_control_challenge_php_submit_button" class="button" type="submit" value="Enviar" />
 							</td>
 						</tr>
 						<tr><td>&nbsp;</td></tr>

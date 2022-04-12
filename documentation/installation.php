@@ -58,13 +58,21 @@
    	}// end try;
 ?>
 
-<div class="page-title">Installation Instructions</div>
+<div class="poli-section">
+	
+	<div class="page-title">Installation Instructions</div>
+	<?php include_once (__ROOT__.'/includes/back-button.inc');?>
 
-<?php include_once (__ROOT__.'/includes/back-button.inc');?>
+
+</div>
+
+
+
+
 
 
 <br/><br/>
-<span class="report-header">Overview</span>
+<span class="report-header poli-texto">Overview</span>
 <br/><br/>
 <!-- <img alt="YouTube" src="/images/youtube-play-icon-40-40.png" style="margin-right: 10px;" /> -->
 <box-icon name='youtube' type='logo' class="poli-icon"></box-icon>

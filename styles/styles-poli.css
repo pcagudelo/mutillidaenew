@@ -1,24 +1,23 @@
 :root{
-
     --color-v: #548235;
     --color-f: #414141;
-
 }
+
 box-icon{
     color: var(--color-f) !important;
 }
+
 .poli-texto{
     color:gray !important;
-    text-decoration: none;
-    
-   
+    text-decoration: none !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-weight: normal !important;
 }
 
 
 .ddsmoothmenu li:hover{
     border-style: solid !important;
     border-color: var(--color-v) !important; 
-
 }
 
 .ddsmoothmenu a:hover{
@@ -26,18 +25,59 @@ box-icon{
     color:var(--color-v) !important;
     background-color: var(--color-f) !important;
 }
-.poli-section{
 
+.poli-section{
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: center  !important;
-   
-
 }
+
 .poli-section div{
     flex-grow: 1 !important;
 }
+.poli-section span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-weight:bold !important;
+}
+
 .poli-section .page-title{
-    flex-basis: 80% !important;
+    flex-basis: 70% !important;
+}
+
+.main-table-frame-left{
+    background-color: var(--color-f) !important;
+}
+
+.form-header{
+    background-color: var(--color-f) !important;
+    color:white !important;
+    text-align: left !important;
+    align-items: center !important;
+    font-weight: normal !important;
+    font-size: small !important;
+    min-width: fit-content !important;
+    min-height: 30px !important;
+}
+.divs{
+    margin:5px !important;
+    border: #414141 !important;
+    border-style: dashed !important;
+    flex-basis: 50% !important;
+}
+.yellow{
+    color:yellow !important;
+}
+
+
+.green{
+    color: var(--color-v) !important;
+    font-weight: bold !important;
+ 
+}
+
+#id_client_side_control_challenge_php_submit_button{
+    color: yellow !important;
+    font-weight: bold !important;
+    background-color: gray !important;
 }
