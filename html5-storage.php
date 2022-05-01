@@ -29,11 +29,18 @@
 		echo "<script type=\"text/javascript\" src=\"javascript/html5-secrets.js\"></script>";		
 	}// end if
 ?>
+<div class="poli-section">
+	<div class="page-title">
+		Almacenamiento HTML 5
+	</div>
 
-<div class="page-title">HTML 5 Storage</div>
+	<?php include_once (__ROOT__.'/includes/back-button.inc');?>
+	<div>
+		<?php include_once (__ROOT__.'/includes/hints/hints-menu-wrapper.inc'); ?>
+	</div>
+</div>
 
-<?php include_once (__ROOT__.'/includes/back-button.inc');?>
-<?php include_once (__ROOT__.'/includes/hints/hints-menu-wrapper.inc'); ?>
+
 
 <!-- BEGIN HTML OUTPUT  -->
 <script type="text/javascript">
@@ -159,41 +166,40 @@
 				Error: Invalid Input - Both Key and Item are required fields
 			</td>
 		</tr>
-		<tr>
-			<td class="form-header">HTML 5 Web Storage</td>
-		</tr>
 		<tr><td>&nbsp;<td></tr>
 	</table>
 	<table>
 		<tr>
-			<td class="sub-header" colspan="3">Web Storage</td>
+			<td class="form-header yellow" colspan="3">Almacenamiento Web</td>
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td class="sub-body">Key</td>
-			<td class="sub-body">Item</td>
-			<td class="sub-body">Storage Type</td>
+			<td class="sub-body bcolor">Key</td>
+			<td class="sub-body bcolor">Item</td>
+			<td class="sub-body bcolor">Storage Type</td>
 			<td>&nbsp;</td><td>&nbsp;</td>
 		</tr>
 		<tbody id="idSessionStorageTableBody" style="font-weight:bold;"></tbody>
-		<tr><td>&nbsp;</td></tr>
+		<tr><td class="green">Ingresar Nueva Key</td></tr>
 		<tr>
-			<td><input	type="text" id="idDOMStorageKeyInput" name="DOMStorageKey" size="20"
+			<td colspan="2">
+				<input	type="text" id="idDOMStorageKeyInput" name="DOMStorageKey" size="20"
 						autofocus="autofocus"
 				<?php
 					if ($lEnableHTMLControls) {
 						echo('minlength="1" maxlength="20" required="required"');
 					}// end if
 				?>			
-			></td>
-			<td><input type="text" id="idDOMStorageItemInput" name="DOMStorageItem" size="20"
-				<?php
-					if ($lEnableHTMLControls) {
-						echo('minlength="1" maxlength="20" required="required"');
-					}// end if
-				?>
-			></td>
-			<td class="label">
+			|	>
+
+				<input type="text" id="idDOMStorageItemInput" name="DOMStorageItem" size="20"
+					<?php
+						if ($lEnableHTMLControls) {
+							echo('minlength="1" maxlength="20" required="required"');
+						}// end if
+					?>
+				>
+			
 				<input type="radio" name="SessionStorageType" value="Session" checked="checked" 
 					<?php
 						if ($lEnableHTMLControls) {
@@ -208,13 +214,16 @@
 						}// end if
 					?>
 				/>Local
-			</td>
+		
 			<td>
-			<input 	onclick="addItemToStorage(this.form);"
-					class="button" 
-					type="button" 
-					value="Add New" />
+
+						
+				<input 	onclick="addItemToStorage(this.form);"
+						class="button" 
+						type="submit" 
+						value="Añadir" />
 			</td>
+		
 		</tr>
 		<tr><td>&nbsp;</td></tr>
 		<tfoot id="idSessionStorageTableFooter">

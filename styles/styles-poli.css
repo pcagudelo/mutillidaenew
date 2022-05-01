@@ -69,6 +69,10 @@ box-icon{
     color:yellow !important;
 }
 
+.bcolor{
+    border-style: solid !important;
+    border-color: var(--color-v) !important; 
+}
 
 .green{
     color: var(--color-v) !important;
@@ -80,4 +84,11 @@ box-icon{
     color: yellow !important;
     font-weight: bold !important;
     background-color: gray !important;
+}
+input[type="radio"]{
+
+    display: inline !important;
+}
+input[type="submit"]{
+    background-color: yellow !important
 }
